@@ -61,7 +61,15 @@ int main () {
         }
         cout << "Total de venta: " << EMPLEADOS[i].ventaTotal << endl;
         cout << endl;
-        cout << "Salario: " << EMPLEADOS[i].salario << endl;
+        if ( EMPLEADOS[i].ventaTotal > 100) {
+            EMPLEADOS[i].salario += EMPLEADOS[i].salario * 0.1;
+            cout << "Salario: " << EMPLEADOS[i].salario << endl;
+            cout << ">> se aumenta un 10% al salario: " << endl;
+        } else {
+            cout << "Salario: " << EMPLEADOS[i].salario<< endl;
+            cout << ">> No se aplico un aumento al salario." << endl;
+        }
+
     }
     for (int i = 0; i < numero; i++) {
         if (Ventamayor == EMPLEADOS[i].ventaTotal) {
